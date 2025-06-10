@@ -1,6 +1,7 @@
 import requests, time, os
 from flask import Flask, jsonify, render_template, abort, send_from_directory, request, Response, render_template_string
 
+from js逆向学习.抖音逆向.博主主页信息获取 import get_info
 app = Flask(__name__)
 
 
@@ -16,7 +17,6 @@ def safe_join(directory, filename):
 def home():
     return "Welcome to the Flask app!"
 
-
 @app.route('/data', methods=['GET'])
 def get_data():
     timestamp = int(time.time())
@@ -29,12 +29,17 @@ def get_data():
     resp.close()
     return data
 
+@app.route('/douyin',methods=['GET','POST'])
+def get_douyin():
+    if request.method == 'POST':
+        id = request.form.get('id')
+    return get_info(id)
 
 @app.route('/get_music_url')
 def get_music_url():
     filename = request.args.get('filename')
-    # 这里你可以根据filename生成音频文件的URL
-    # 假设你的音频文件位于C:/爬虫战果/音乐目录下
+    # 这里可以根据filename生成音频文件的URL
+    # 假设的音频文件位于C:/爬虫战果/音乐目录下
     url = f'/music?filename={filename}'
     return jsonify({'url': url})
 
