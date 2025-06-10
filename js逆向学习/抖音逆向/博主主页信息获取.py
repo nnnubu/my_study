@@ -114,7 +114,7 @@ def get_info(id,max_cursor = 0,min_cursor = 0,count = -1,time_list=[],aweme_list
                 'time_list_query': '0',
                 'whale_cut_token': '',
                 'cut_version': '1',
-                'count': '60',  # 这个是每页最大数量，其实实际返回不止这些，会加上用户主页的置顶视频的数量,直接设置成200得了，但是一次最多好像只能拿40多个,下一次的工作是利用迭代法按每个月来获取内容
+                'count': '60',  # 这个是每页最大数量，其实实际返回不止这些，会加上用户主页的置顶视频的数量,直接设置成200得了，但是一次最多好像只能拿40多个,下一次的工作是利用递归法按每个月来获取内容
                 'publish_video_strategy_type': '2',
                 'from_user_page': '1',
                 'update_version_code': '170400',
@@ -169,7 +169,7 @@ def get_info(id,max_cursor = 0,min_cursor = 0,count = -1,time_list=[],aweme_list
         return aweme_list
 
 if __name__ == '__main__':
-    id = input('请黏贴用户search_id：')
+    id = input('请粘贴用户search_id：')
     data = get_info(id)
     count = 1
     for i in data:
