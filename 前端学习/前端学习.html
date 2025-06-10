@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+<!--    <link rel="stylesheet" href="../前端学习/前端学习.css">-->
+    <link rel="stylesheet" href="{{url_for('source',filename='前端学习.css')}}">
+</head>
+<body>
+<div class="base">
+    <div>
+<!--        <img src="C:\Users\nnnubu\Pictures\Saved Pictures\newhome_bg.jpg">-->
+        <img src="https://img.3dmgame.com/uploads/images/news/20210924/1632477860_497872.jpg">
+    </div>
+    <div>
+    <a href="my_page.html" target="_blank">雷猴阿</a>
+    </div>
+    <hr>
+    <div>
+
+    <table border="10" align="center">
+        <tr>
+            <th id="t1"></th>
+            <th id="t2"></th>
+            <th id="t3"></th>
+            <th id="t4"></th>
+        </tr>
+        <tr>
+            <td id="t1"><audio controls loop></audio></td>
+            <td id="t2"><audio controls loop></audio></td>
+            <td id="t3"><audio controls loop></audio></td>
+            <td id="t4"><audio controls loop></audio></td>
+        </tr>
+        <tr> 
+            <th id="t5"></th>
+            <th id="t6"></th>
+            <th id="t7"></th>
+            <th id="t8"></th>
+        </tr>
+        <tr>
+            <td id="t5"><audio controls loop></audio></td>
+            <td id="t6"><audio controls loop></audio></td>
+            <td id="t7"><audio controls loop></audio></td>
+            <td id="t8"><audio controls loop></audio></td>
+        </tr>
+    </table>
+    </div>
+    <hr>
+    <div>
+    <form action="">
+        &lt;&nbsp;&gt;
+        文本框：<input type="text" placeholder="请输入账号"><br>
+        密码框：<input type="password" placeholder="请输入密码"><br>
+        单选框：
+        <input type="radio" name="gender" id="man"><label for="man">男</label>
+        <input type="radio" name="gender" id="women"><label for="women">女</label><br>
+        多选框：<input type="checkbox"  checked="checked"><br>
+        文件框：<input type="file"  multiple><br>
+        日期：
+        <select>
+            <option selected>年</option>
+            <option>月</option>
+            <option>日</option>
+        </select>
+        <textarea placeholder="请输入内容："></textarea><br>
+        <button type="reset" onclick="alert('按你大坝呢！')">你按一下试试？</button>
+    </form>
+    </div>
+    <div>
+        <form action="/douyin" method="post">
+            抖音博主主页信息获取:<input type="text" name="id" placeholder="请粘贴用户search_id:">
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script>
+        // 内部js书写位置
+        // alert('你瞅啥？')
+    </script>
+    <script src="{{url_for('source',filename='前端学习.js')}}"></script>
+<!--    <script src="../前端学习/前端学习.js">--></script>
+<!--     外部js引入,这中间不允许写内容，写了也不会执行-->
+    </div>
+</div>
+</body>
+</html>
