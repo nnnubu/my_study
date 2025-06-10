@@ -1,4 +1,4 @@
-require('./env')
+require('C:\\Python学习\\js逆向学习\\抖音逆向\\env.js')
 
 function a_bogus(args, ua) {
 
